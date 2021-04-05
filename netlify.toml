@@ -1,4 +1,4 @@
 # netlify.toml
 
 [[plugins]]
-package = "/plugins/netlify-purge-fastly-cache-on-deploy"
+package = "/plugins/index.js"
