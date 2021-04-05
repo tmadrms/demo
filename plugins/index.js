@@ -32,13 +32,15 @@ module.exports = {
                 },
               }) {
     console.log('Preparing to trigger Fastly cache purge');
-    let baseUrl = `https://api.fastly.com/service/${FASTLY_SERVICE_ID}/purge_all`;
+    //let baseUrl = `https://api.fastly.com/service/${FASTLY_SERVICE_ID}/purge_all`;
+    let baseUrl = `https://api.fastly.com/service/${FASTLY_SERVICE_ID}/purge/css`; //purge only surrogate key
     let headers;
     switch( authMethod ) {
       case 'TOKEN':
         headers = {
           'Fastly-Key': FASTLY_API_TOKEN,
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          //'Fastly-Soft-Purge' : '1'
         };
         break;
 
@@ -47,7 +49,7 @@ module.exports = {
 
     try {
       const { status, statusText } = await fetch(baseUrl, {
-        method: 'POST',
+        method: 'PURGE',
         headers: headers,
         body: JSON.stringify(body),
       });
