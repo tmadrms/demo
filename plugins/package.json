@@ -1,0 +1,29 @@
+{
+  "name": "netlify-purge-fastly-on-deploy",
+  "version": "1.0.0",
+  "description": "Automatically purge Fastly cache on Netlify deploy.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tmadrms/netlify-purge-fastly-on-deploy.git"
+  },
+  "keywords": [
+    "fastly",
+    "netlify",
+    "cache",
+    "purge",
+    "netlify-plugin"
+  ],
+  "author": "Andy Wright <awright@fastly.com> (https://www.fastly.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tmadrms/netlify-purge-fastly-on-deploy/issues"
+  },
+  "homepage": "https://github.com/tmadrms/netlify-purge-fastly-on-deploy#readme",
+  "dependencies": {
+    "node-fetch": "^2.6.0"
+  }
+}
