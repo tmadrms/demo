@@ -49,7 +49,7 @@ module.exports = {
 
     try {
       const { status, statusText } = await fetch(baseUrl, {
-        method: 'PURGE',
+        method: 'POST',
         headers: headers,
         body: JSON.stringify(body),
       });
