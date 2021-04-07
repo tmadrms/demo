@@ -40,7 +40,7 @@ module.exports = {
         headers = {
           'Fastly-Key': FASTLY_API_TOKEN,
           'Content-Type': 'application/json',
-          'Fastly-Soft-Purge' : '0'
+          'Fastly-Soft-Purge' : '1'
         };
         break;
 
